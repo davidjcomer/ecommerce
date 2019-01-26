@@ -6,7 +6,6 @@ const secureRoute = require('../lib/secureRoute');
 const adminRoute = require('../lib/adminRoute');
 const stockController = require('../controllers/stockController');
 
-
 router.route('/baskets')
   .get( basketController.index)
   .post(adminRoute, basketController.create);
@@ -15,7 +14,6 @@ router.route('/baskets/:id')
   .get(basketController.show)
   .put(adminRoute, basketController.update)
   .delete(adminRoute, basketController.delete);
-
 
 router.post('/register', authController.register);
 router.post('/login', authController.login);
