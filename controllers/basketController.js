@@ -17,7 +17,6 @@ function showRoute(req, res, next) {
     .catch(next);
 }
 
-
 function createRoute(req, res, next) {
   Basket
     .create(req.body)
@@ -26,7 +25,6 @@ function createRoute(req, res, next) {
     })
     .catch(next);
 }
-
 
 function updateRoute(req, res, next) {
   Basket
@@ -47,8 +45,6 @@ function deleteRoute(req, res, next) {
     .then(() => res.sendStatus(204))
     .catch(next);
 }
-
-
 
 
 module.exports = {
